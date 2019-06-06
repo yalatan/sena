@@ -1,3 +1,8 @@
+
+  (function ($) {
+      $(document).ready(function () {
+
+
   // Создаём холст
 
   canvas = document.getElementById("canvas");
@@ -8,7 +13,7 @@
 
   //создаём переменную для фото майки
 
-  var imgshirt = "../img/1.jpg"
+  var imgshirt = "./img/1.jpg"
 
   // Загружаем файл изображения
   img.src = imgshirt;
@@ -19,18 +24,12 @@
 
       context.drawImage(img, 0, 0, 400, 400);
 
-
-
-
   };
 
-
-
-
-  (function ($) {
-      $(document).ready(function () {
-
-
+          
+          
+          
+          
           //убираем у ссылок поведение по умолчанию
 
           $('a').on('click', function (e) {
