@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: grid;
+   /* grid-template-columns: 150px repeat(2, auto) 30px;*/
+   grid-template-columns: 150px 660px 1fr 30px;
+    grid-template-rows: repeat(4, auto);
+    font-family: 'Roboto', sans-serif;
+    max-width: 1360px;
+    margin: 2vw auto;
+}
+/*TOP*/
+.logo{  
+    height: 80px;
+    grid-area: 1/1/1/5;  
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+}
+.logo_img{
+    grid-area: 1/1/1/1;
+    margin-left: 20px;
+}
+.logo_telefone{
+    grid-area: 1/2/1/3;
+    text-align: right;
+}
+.logo_telefone_a{
+    text-decoration: none;
+}
+.logo_telefone_a span{
+    color: black;
+    font-size: 25px;
+}
+.logo_telefone_a svg{
+    margin-bottom: -10px;
+}
+.logo_basket {
+    font-size: 20px;
+    margin-left: 18px;
+    margin-right: 44px;
+}
+
+.logo_basket svg{
+    margin-bottom: -10px;
+}
+.logo_line img{
+    margin-bottom: -15px;
+}
+.logo_language{
+    font-size: 20px;
+    color: #C1C1C1;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+/*navigation panel*/
+.navigation{
+    height: 100px;
+    grid-area: 2/2/2/4;
+    margin: 0 50px;
+}
+.navigation_li{
+    display: inline-block; 
+    cursor: pointer;
+    margin-left: 1px;
+    margin-right: 65px;
+    padding-bottom: 15px;
+    color: lightgrey;
+}
+.navigation_li svg path{
+    fill: lightgrey;
+    stroke: lightgrey;
+}
+/*common description*/
+.description{
+    grid-area: 3/2/3/2;
+    width: 512px;
+}
+
+.description_h1{
+font-size: 30px;
+text-align: center;
+margin-bottom: 50px;
+/*margin: 10px auto 50px auto;*/
+}
+.border_bottom_lightGrey{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+.description_h2{
+    font-size: 28px;
+    margin-bottom: 26px;
+}
+.description_topChoose, .description_bottomChoose{
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.description_topChoose_li, .description_bottomChoose_li{
+    font-size: 22px;
+    color: #C1C1C1;
+    display: inline-block; 
+    cursor: pointer;
+}
+.description  svg path{
+    fill: lightgrey;
+    stroke: lightgrey;
+}
+
+/*sex_and_style*/
+.description_sex_and_style .description_topChoose li{
+    margin-left: 26px;
+    margin-right: 48px;
+}
+.description_sex_and_style .description_bottomChoose li{
+    margin-left: 72px;
+    margin-right: 53px;
+}
+/*type_and_color*/
+.description_type_and_color .description_topChoose li{
+    margin-left: 26px;
+    margin-right: 48px;
+}
+
+.description_color svg{
+cursor: pointer;
+}
+
+
+.description_color_div{
+    
+}
+.description_color{
+  text-align: center;
+  width: 250px;
+ margin-left: auto;
+  margin-right: auto;
+}
+/*.description_color svg{
+margin-left: 5px;
+margin-right: 5px;
+padding: 2px;
+}*/
+.white circle{
+    fill: white;
+   stroke: grey;
+   color: white;
+}
+.black{
+    fill: black;
+    stroke: grey;
+  color: black;
+}
+.lightGrey{
+    fill: lightgrey;
+    stroke: grey;
+  color: lightgrey;
+}
+.red{
+    fill: red;
+    stroke: grey;
+  color: red;
+}
+.orange{
+    fill: orange;
+   stroke: grey;
+}
+.yellow{
+    fill: yellow;
+   stroke: grey;
+}
+.green{
+    fill: green;
+    stroke: grey;
+}
+.blue{
+    fill: blue;
+    stroke: grey;
+}
+
+
+/*IMAGE choose*/
+.description_image .description_h1{
+    margin-bottom: 0;
+}
+.description_image .description_h2,
+.description_text .description_h2{
+    margin-top: 15px;
+font-size: 24px;
+margin-bottom: 10px;
+}
+.description_image .description_bottomChoose_li,
+.description_text .description_bottomChoose_li{
+    font-size: 17px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.description_image .description_topChoose li{
+    margin-left: 26px;
+    margin-right: 48px;
+}
+
+.description_image_telecharger_wrapper{
+    width: 100%;
+    height: 245px;  
+    text-align: center;
+    margin-bottom: 50px;
+}
+.select_image{
+    width: 100px;
+    height: 100px;  
+    border: 1px solid lightgrey; 
+}
+#userFoto{
+    width: 80px;
+    height: 80px;
+}
+/*collection fotos*/
+.collections_names_li{
+    display: inline-block;
+    border: 1px solid lightgrey;
+    padding: 3px 10px;
+    margin-right: 10px;
+    color: lightgrey;
+    cursor: pointer;
+}
+.collections_active{
+    border: 1px solid black;  
+    color: #EA6C18;
+}
+.collections{
+   
+}
+.collections_preview{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.collections_preview_collection1{
+}
+.collections_preview_images{
+    width: 90px;
+    height: 90px;
+    border: 1px solid lightgrey;
+    margin: 5px 22px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+
+/*section 4 text */
+
+
+.description_inputText{
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+    position: relative;
+}
+
+
+#inputText{
+    min-width: 200px;
+    min-height: 30px; 
+    padding: 5px;
+    color: lightgrey; 
+}
+.btn_set_textApplication{
+    position: absolute;
+   top: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 15px;
+    
+
+background: #EA6C18;
+padding: 10px;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+/*line-height: 21px;*/
+color: #FFFFFF;
+cursor: pointer;
+}
+.description_text p{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+
+
+#preview_application_text{
+    min-width: 100px;
+    min-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px dotted grey;
+    cursor: pointer;
+  /*  overflow: hidden;
+    padding: auto;*/
+}
+#preview_application_image{
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    border: 2px dotted lightgrey;
+    cursor: pointer;
+    margin: auto; 
+}
+#preview_application_image img{
+    width: 100%;
+    height: 100%;
+}
+.description_size_and_number_input_number{
+    width: 40px;
+    height: 20px;
+}
+
+/*right sidebar PREVIEW*/
+.preview{
+    width: 420px;
+   
+    grid-area: 3/3/5/4;
+}
+.preview_bigImage{
+    width: 380px;
+    height: 400px;
+   
+    margin: 0 auto;
+    position: relative;
+}
+.preview_smallImages{
+    margin: 5px auto; 
+    text-align: center;
+}
+.preview_smallImages_li{
+    display: inline-block;
+    border: 1px solid grey;
+    width: 65px;
+    height: 65px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.preview_smallImages_li img{
+    width: 100%;
+    height: 100%;
+}
+.next_step{
+    width: 503px;
+     /* border: 2px solid red;*/
+      grid-area: 4/2/4/2;
+      text-align: center;
+}
+.next_step_button{
+width: 318px;
+height: 71px;
+background: #EA6C18;
+margin-top: 5px;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+color: #FFFFFF;
+cursor: pointer;
+}
+
+
+/*ИНТЕРАКТИВ*/
+.active{
+    font-weight: bold;
+    color: #000000;
+    border-bottom: 3px solid #EA6C18;
+    
+}
+
+.hide{
+display: none;
+}
+.active svg path{    
+    fill: #000000;
+    stroke: #000000;
+}
+
+/*text styles*/
+.indie_Flower{
+    font-family: 'Indie Flower', cursive;
+}
+.source_Code_Pro{
+    font-family: 'Source Code Pro', monospace;  
+}
+.lobster{
+    font-family: 'Lobster', cursive; 
+}
+.pacifico{
+    font-family: 'Pacifico', cursive; 
+}
+#description_text_choose_color svg{
+    cursor: pointer;
+}
+/*section 5*/
+.description_size_and_amount  .description_topChoose_li{
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 50px;
+}
+.description_size_and_amount_div_number{
+    text-align: center;
+}
+.description_size_and_amount_input_number{
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 50px;
+}
+/*draw area*/
+.draw_area{
+    position: absolute;
+    top: 75px;
+    left: 125px;
+    width: 140px;
+    height: 200px;
+    border: 2px dotted lightgrey;
+}
+
+.wi-fb-modal {
+    
+    max-width: 850px;
+    padding: 50px;
+}
+
+
+.preview_image_for_save{
+    width: 400px;
+    height: 500px;
+    border:1px solid grey;
+}
+
+
+
+
+.form_for_save_inputs, .form_for_save_inputs_textarea{
+       max-width: 400px !important;
+    
+   
+    border: none !important;
+   
+    background:lightgrey  !important;
+    font-size: 1.5em !important;
+  
+}
+
+.form_for_save_inputs{
+     height: 60px !important;
+   
+ }
+.form_for_save_inputs_textarea {
+     height: 160px !important;
+     color: grey;
+    
+ }
+.last_fom{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.span_required{
+    color: red;
+    vertical-align: top;
+}
