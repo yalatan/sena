@@ -20,7 +20,11 @@
 
             });
 
-            console.log(ind, index)
+            console.log(index)
+            if(ind == 3){
+                $('.draw_area').removeClass("hide");
+                $('#preview_application_text').removeClass("hide");
+            }
             if (index == 2) {
 
                 $(".next_step").addClass('hide');
@@ -50,18 +54,26 @@
 
                 });
             }
-            else {
-                $(".next_step").removeClass('hide')
-            }
+        else{$(".next_step").removeClass('hide');}
 
 
-            if (index == 3) {
-                $('#preview_application_text').removeClass("hide");
-            }
+          
+
+
+            
 
 
 
         });
+        $('.logo_language').click(function(){
+     $('.logo_language').each(function () {
+                $(this).removeClass('active');
+            });
+
+            $(this).addClass('active');
+    
+     
+ });
         /*CANVAS*/
         var example = document.getElementById("example");
         example.width = 380;
@@ -159,14 +171,7 @@
 
             }
         });
-        /*реализация раскрашивания*/
-        $(".description_color svg").on('click', function (e) {
-            console.log($(this).css("fill"));
-        });
-
-
-
-
+       
         /*END section 2 type_and_color*/
 
         /*section 3 image*/
@@ -419,6 +424,16 @@
 
         });
 
+/*перемещение текста по рисунку*/
+$("#preview_application_text").on('click', function(){
+    $("#preview_application_text").addClass('preview_application_text_content')
+
+
+
+});
+
+
+
 
         $("#preview_application_text").mousedown(function (e) {
             let x_start = e.pageX;
@@ -479,6 +494,20 @@
         $("#confirm_1").after('<label for="confirm_1" class="form_for_save_label_checkbox">Text text text</label>');
         $("#confirm_2").after('<label for="confirm_2" class="form_for_save_label_checkbox">not robot</label>');
         /////////////////////////
+
+
+
+
+/*IMAGE TOOLS*/
+$('#magnifier').on('click', function(){
+    $('#example').addClass('magnifier');
+    $('#example').on('click', function(){
+        $('#example').removeClass('magnifier');  
+    });
+});
+
+
+
     });
 })(jQuery);
 
