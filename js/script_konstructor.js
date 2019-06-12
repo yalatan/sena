@@ -512,25 +512,50 @@ $('#magnifier').on('click', function(){
 })(jQuery);
 
 
-/*
+
 document.addEventListener("DOMContentLoaded", function ready() {
-    function addActive(event) {
-        console.log(event);
-        let listClasses = document.getElementsByClassName(event);
-        console.log(listClasses);
-        for(let i=0; i<listClasses.length; i++ ){
-            listClasses[i].classList.remove("active");
-           };
-        let element = event.target.id;
-        document.getElementById(element).classList.add("active");
+document.querySelector('#chooseColor').addEventListener('click', function(){
+     this.classList.toggle('chooseColor_active'); 
 
-    };
+        if(document.querySelector('#chooseColor').classList.contains('chooseColor_active')){ 
+        document.getElementById('color_picker').innerHTML = '<div id="color-picker" class="cp-default"> <div class="picker-wrapper"> <div id="picker" class="picker"></div>'+
+        '<div id="picker-indicator" class="picker-indicator"></div>'+
+                            '</div> <div class="pcr-wrapper">  <div id="pcr" class="pcr"></div>   <div id="pcr-indicator" class="pcr-indicator"></div>'+
+                                '</div>     </div>';
+            document.getElementById('color-picker').style.top = '0px';
+            document.getElementById('color-picker').style.left= '0px';
+          
+                cp = ColorPicker(document.getElementById('pcr'), document.getElementById('picker'), 
+                function(hex, mousePicker, mousepcr) {
+                currentColor = hex;
+                ColorPicker.positionIndicators(
+                document.getElementById('pcr-indicator'),
+                document.getElementById('picker-indicator'),
+                mousepcr, mousePicker);      
+                document.querySelector('#picker').addEventListener('click', function(){
+                    document.getElementById("inputText").style.color = hex;
+                   
+                });
+
+
+                });
+            cp.setHex('#D4EDFB'); 
+           
+            
+
+
+        } else {
+            document.getElementById('color_picker').innerHTML = " "; 
+        }
+    
+    
+    }); 
 
 
 
-    document.getElementsByClassName("description_topChoose_li").onclick = function () { addActive();};
 
-});*/
+
+});
 
 
 

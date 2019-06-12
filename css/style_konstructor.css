@@ -258,7 +258,9 @@ margin-bottom: 10px;
 
 
 /*section 4 text */
-
+.description_text{
+    position: relative;
+}
 
 .description_inputText{
     vertical-align: middle;
@@ -268,7 +270,8 @@ margin-bottom: 10px;
 
 
 #inputText{
-    min-width: 200px;
+    min-width: 50px;
+    max-width: 200px;
     min-height: 30px; 
     padding: 5px;
     color: lightgrey; 
@@ -510,3 +513,27 @@ display: none;
             -o-transition: all 1s ease-out;
             -webkit-transition: all 1s ease-out;
         }
+#color_picker{
+    position: absolute;
+    top: 70px;
+    right: 0px;
+   width: 140px;
+
+}
+.chooseColor{
+    color: lightgrey;
+    font-size: 30px;
+    cursor: pointer;
+}
+.chooseColor_active{
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    color: #EA6C18;
+}
+.pcr rect{
+    cursor: pointer;
+}
+.picker rect{
+    cursor: cell;
+}

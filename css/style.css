@@ -269,16 +269,9 @@ button:focus {
     font-size: 2vw;
 }
 
-.gallery {
-   height: 300px; 
+.lp-slider1 div .active{
+    border-bottom: none;
 }
-.item{
-    border: 3px solid red;
-}
-.gallery_img {
-    
-}
-
 .footer {
     display: grid;
     grid-template-columns: 50% 50%;
