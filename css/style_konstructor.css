@@ -430,16 +430,9 @@ a {
 
 /*draw area*/
 .draw_area {
-    position: absolute;
-    top: 98px;
-    left: 118px;
-    width: 140px;
-    height: 200px;
-    border: 2px dotted lightgrey;
 }
 
 .wi-fb-modal {
-
     max-width: 850px;
     padding: 50px;
 }
