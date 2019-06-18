@@ -1,5 +1,80 @@
+let models = [{
+        sex: "man",
+        style: "tshirts",
+        cutoutType: "round",
+        color: "black",
+        type: "jpg"
+    },
+    {
+        sex: "man",
+        style: "tshirts",
+        cutoutType: "round",
+        color: "turquoise",
+        type: "jpg"
+    },
+    {
+        sex: "man",
+        style: "tshirts",
+        cutoutType: "round",
+        color: "white_and_black",
+        type: "png"
+    }
+];
+let model_man_tshirts_vthirt = [{
+        color: "green",
+        type: "jpg"
+    },
+    {
+        color: "red",
+        type: "png"
+    },
+    {
+        color: "white",
+        type: "jpg"
+    },
+
+];
+
 (function ($) {
     $(document).ready(function () {
+        var cutout_Section2;
+        var image_application_method;
+        var text_application_method;
+        let index;
+        /*CANVAS*/
+        //  // Создаем объект изображения
+        var pic = new Image();
+        //  //создаём переменную для фото майки
+        let srcPic = "assets/man/tshirts/round/model_white_and_black/1.png";
+        var canvas = new fabric.Canvas('example');
+        fabric.Image.fromURL(srcPic, function (pic) {
+
+            pic.scale(0.85);
+            pic.set('selectable', false);
+            canvas.add(pic);
+            canvas.renderAll();
+
+        });
+
+        function setSrcCanvas(src, ext) {
+            canvas.clear();
+            srcPic = src + 1 + '.' + ext;
+            fabric.Image.fromURL(srcPic, function (pic) {
+                pic.scale(0.85);
+                pic.set('selectable', false);
+                canvas.add(pic);
+                canvas.renderAll();
+            });
+            let i = 1;
+            $(".preview_smallImages_li img").each(function () {
+                let path = src + i + "." + ext;
+                $(this).attr("src", path);
+                i++;
+            });
+        };
+        setSrcCanvas("assets/man/tshirts/round/model_white_and_black/", 'png');
+
+
         /*выбор активного окна в меню навигации*/
 
         $(".navigation_li").on('click', function (e) {
@@ -9,7 +84,7 @@
 
             $(this).addClass('active');
             let ind = $(this).index();
-            let index = ind;
+            index = ind;
 
             $(".description_box").each(function () {
                 if ($(this).index() != ind) {
@@ -19,9 +94,7 @@
                 }
 
             });
-
-            console.log(index)
-            if(ind == 3){
+            if (ind == 3) {
                 $('.draw_area').removeClass("hide");
                 $('#preview_application_text').removeClass("hide");
             }
@@ -30,13 +103,24 @@
                 $(".next_step").addClass('hide');
                 $('#collection').empty();
 
-                let collection = [
-                    { "fileName": "c11.png" },
-                    { "fileName": "c12.png" },
-                    { "fileName": "c13.png" },
-                    { "fileName": "c14.png" },
-                    { "fileName": "c15.png" },
-                    { "fileName": "c16.png" }
+                let collection = [{
+                        "fileName": "c11.png"
+                    },
+                    {
+                        "fileName": "c12.png"
+                    },
+                    {
+                        "fileName": "c13.png"
+                    },
+                    {
+                        "fileName": "c14.png"
+                    },
+                    {
+                        "fileName": "c15.png"
+                    },
+                    {
+                        "fileName": "c16.png"
+                    }
                 ];
 
                 collection.forEach(function (item) {
@@ -47,52 +131,76 @@
                 $('#preview_application_image').removeClass("hide");
                 $('.draw_area').removeClass("hide");
                 $(".collections_preview_images").on('click', function (e) {
-                    console.log($(this).attr('src'));
+
                     let src = $(this).attr('src');
-                    $('#preview_application_image_img').attr('src', src);
+                    var imgObj = new Image();
+                    imgObj.src = src;
+                    imgObj.onload = function () {
+                        var image = new fabric.Image(imgObj);
+                        image.set({
+                            angle: 0,
+                            padding: 10,
+                            cornersize: 10,
+                            height: 110,
+                            width: 110,
+                        });
+                        canvas.centerObject(image);
+                        canvas.remove(canvas.getActiveObject());
+
+                        canvas.add(image).setActiveObject(image);
+                        canvas.renderAll();
+                    }
 
 
                 });
+            } else {
+                $(".next_step").removeClass('hide');
             }
-        else{$(".next_step").removeClass('hide');}
-
-
-          
-
-
-            
-
-
-
         });
-        $('.logo_language').click(function(){
-     $('.logo_language').each(function () {
+
+        $('.logo_language').click(function () {
+            $('.logo_language').each(function () {
                 $(this).removeClass('active');
             });
-
             $(this).addClass('active');
-    
-     
- });
-        /*CANVAS*/
-        var example = document.getElementById("example");
-        example.width = 380;
-        example.height = 400;
-        var canvas = example.getContext('2d'); // Контекст
-        var pic = new Image();              // "Создаём" изображение
-        pic.onload = function () {    // Событие onLoad, ждём момента пока загрузится изображение
-            canvas.drawImage(pic, 0, 0, example.width, example.height);  // Рисуем изображение от точки с координатами 0, 0
-
-        }
-        pic.src = "assets/tShirts/RoundTshirt/basic_model_construktor1/white-1.png";
+        });
 
         /*section 1 sex_and_style*/
+        let srcCanvas;
+        let activeSex;
+        let activeStyle;
+
+        function sex_and_style() {
+            if (activeSex == "Man" || activeSex == undefined) {
+                if (activeStyle == undefined || activeStyle == "T-shirt") {
+                    setSrcCanvas("assets/man/tshirts/round/model_white_and_black/", 'png');
+                } else {
+                    setSrcCanvas("assets/man/sweat/hood/model_white/", 'jpg');
+                }
+            } else if (activeSex == "Woman") {
+                if (activeStyle == undefined || activeStyle == "T-shirt") {
+                    setSrcCanvas("assets/woman/tshirts/round/model_white/", 'jpg');
+                } else {
+                    setSrcCanvas("assets/woman/sweat/hood/model_pink/", 'jpg');
+                }
+            } else if (activeSex == "Child") {
+                if (activeStyle == undefined || activeStyle == "T-shirt") {
+                    setSrcCanvas("assets/child/tshirts/round/model_white/", 'jpg');
+                } else {
+                    setSrcCanvas("assets/child/sweat/hood/model_white/", 'jpg');
+                }
+            }
+        };
 
         $(".description_sex_and_style .description_topChoose_li").on('click', function (e) {
             $(".description_sex_and_style .description_topChoose_li").each(function () {
                 $(this).removeClass('active');
             });
             $(this).addClass('active');
+            activeSex = $(this).text();
+            sex_and_style();
+
+
         });
 
         $(".description_sex_and_style .description_bottomChoose_li").on('click', function (e) {
@@ -102,39 +210,21 @@
                 $(this).removeClass('active');
             });
             $(this).addClass('active');
+            activeStyle = $(this).text();
+            sex_and_style();
 
-
-
-            /*размещение базисной модели*/
-
-            if (ind == 1) {
-                canvas.clearRect(0, 0, example.width, example.height);
-                pic.src = "assets/sweatshirts/basic_model_construktor1/sweat1.jpg";
-                let i = 1;
-                $(".preview_smallImages_li img").each(function () {
-                    let path = "assets/sweatshirts/basic_model_construktor1/sweat" + i + ".jpg ";
-                    $(this).attr("src", path);
-                    i++;
-                });
-
-
-            } else if (ind == 0) {
-                canvas.clearRect(0, 0, example.width, example.height);
-                pic.src = "assets/tShirts/RoundTshirt/basic_model_construktor1/white-1.png";
-                let i = 1;
-                $(".preview_smallImages_li img").each(function () {
-                    let path = "assets/tShirts/RoundTshirt/basic_model_construktor1/white-" + i + ".png ";
-                    $(this).attr("src", path);
-                    i++;
-                });
-
-            }
 
         });
+
         $(".preview_smallImages_li img").on('click', function (e) {
-            canvas.clearRect(0, 0, example.width, example.height);
-            let path = $(this).attr("src");
-            pic.src = path;
+            canvas.clear();
+            srcPic = $(this).attr("src");
+            fabric.Image.fromURL(srcPic, function (pic) {
+                pic.scale(0.85);
+                pic.set('selectable', false);
+                canvas.add(pic);
+            });
+
         });
 
         /*END section 1 sex_and_style*/
@@ -148,30 +238,57 @@
             $(this).addClass('active');
 
             let ind = $(this).index();
-            if (ind == 1) {
-                canvas.clearRect(0, 0, example.width, example.height);
-                pic.src = "assets/tShirts/VtShirt/basic_model_konstruktor1/red-1.svg";
-                let i = 1;
-                $(".preview_smallImages_li img").each(function () {
-                    let path = "assets/tShirts/VtShirt/basic_model_konstruktor1/red-" + i + ".png ";
-                    $(this).attr("src", path);
-                    i++;
-                });
+            if (ind == 0) {
+                cutout_Section2 = "Round";
+                sex_and_style();
+                $(".models_men_tshirts_round").removeClass("hide");
+                $(".models_men_tshirts_vshirt").addClass("hide");
+            } else if (ind == 1) {
+                cutout_Section2 = "V-Shaped";
+                if (activeSex == "Man" || activeSex == undefined) {
+                    if (activeStyle == undefined || activeStyle == "T-shirt") {
 
-
-            } else if (ind == 0) {
-                canvas.clearRect(0, 0, example.width, example.height);
-                pic.src = "assets/tShirts/RoundTshirt/basic_model_construktor1/white-1.png";
-                let i = 1;
-                $(".preview_smallImages_li img").each(function () {
-                    let path = "assets/tShirts/RoundTshirt/basic_model_construktor1/white-" + i + ".png ";
-                    $(this).attr("src", path);
-                    i++;
-                });
+                        setSrcCanvas("assets/man/tshirts/vshirt/model_white/", 'jpg');
+                    } else {
+                        setSrcCanvas("assets/man/sweat/sweat/model_white/", 'jpg');
+                    }
+                } else if (activeSex == "Woman") {
+                    if (activeStyle == undefined || activeStyle == "T-shirt") {
+                        setSrcCanvas("assets/woman/tshirts/vshirt/model_white/", 'jpg');
+                    } else {
+                        setSrcCanvas("assets/woman/sweat/sweat/model_white/", 'jpg');
+                    }
+                } else if (activeSex == "Child") {
+                    if (activeStyle == undefined || activeStyle == "T-shirt") {
+                        setSrcCanvas("assets/child/tshirts/vshirt/model_white/", 'jpg');
+                    } else {
+                        setSrcCanvas("assets/child/sweat/sweat/model_green/", 'jpg');
+                    }
+                };
+                $(".models_men_tshirts_round").addClass("hide");
+                $(".models_men_tshirts_vshirt").removeClass("hide");
+            }
+        });
+        $(".description_type_and_color .description_color svg").on('click', function (e) {
+            let color = $(this).index();
+            let src = srcPic;
+            src = src.split("");
+            let ind = src.indexOf("_");
+            src = src.slice(0, ind + 1).join("");
+            if (activeSex == "Man" || activeSex == undefined && activeStyle == undefined ||
+                activeStyle == "T-shirt") {
+                if ($("#description_type_round").hasClass('active')) {
+                    setSrcCanvas(src + models[color]["color"] + "/", models[color]["type"]);
+                } else if ($("#description_type_vShaped").hasClass('active')) {
+                    setSrcCanvas(src + model_man_tshirts_vthirt[color]["color"] + "/", model_man_tshirts_vthirt[color]["type"]);
+                }
 
             }
         });
-       
+
+
+
+
         /*END section 2 type_and_color*/
 
         /*section 3 image*/
@@ -198,6 +315,8 @@
 
         /*UPLOAD*/
 
+        var image;
+        var obj;
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -206,6 +325,22 @@
                 reader.onload = function (e) {
 
                     $('#userFoto').attr('src', e.target.result).removeClass("hide");
+                    var img = new Image();
+                    img.onload = function () {
+                        image = new fabric.Image(img, {
+                            left: 100,
+                            top: 60,
+                            scaleX: 0.3,
+                            scaleY: 0.3
+                        });
+                        canvas.centerObject(image);
+                        canvas.remove(canvas.getActiveObject());
+
+                        canvas.add(image).setActiveObject(image);
+                        canvas.renderAll();
+                    }
+                    img.src = e.target.result;
+
                 }
 
                 reader.readAsDataURL(input.files[0]);
@@ -273,13 +408,24 @@
             if (index == 0) {
 
                 $('#collection').empty();
-                let collection = [
-                    { "fileName": "c11.png" },
-                    { "fileName": "c12.png" },
-                    { "fileName": "c13.png" },
-                    { "fileName": "c14.png" },
-                    { "fileName": "c15.png" },
-                    { "fileName": "c16.png" }
+                let collection = [{
+                        "fileName": "c11.png"
+                    },
+                    {
+                        "fileName": "c12.png"
+                    },
+                    {
+                        "fileName": "c13.png"
+                    },
+                    {
+                        "fileName": "c14.png"
+                    },
+                    {
+                        "fileName": "c15.png"
+                    },
+                    {
+                        "fileName": "c16.png"
+                    }
                 ];
 
                 collection.forEach(function (item) {
@@ -291,13 +437,24 @@
             if (index == 1) {
 
                 $('#collection').empty();
-                let collection = [
-                    { "fileName": "c11.png" },
-                    { "fileName": "c12.png" },
-                    { "fileName": "c13.png" },
-                    { "fileName": "c14.png" },
-                    { "fileName": "c15.png" },
-                    { "fileName": "c16.png" }
+                let collection = [{
+                        "fileName": "c11.png"
+                    },
+                    {
+                        "fileName": "c12.png"
+                    },
+                    {
+                        "fileName": "c13.png"
+                    },
+                    {
+                        "fileName": "c14.png"
+                    },
+                    {
+                        "fileName": "c15.png"
+                    },
+                    {
+                        "fileName": "c16.png"
+                    }
                 ];
 
                 collection.forEach(function (item) {
@@ -308,13 +465,24 @@
             if (index == 2) {
 
                 $('#collection').empty();
-                let collection = [
-                    { "fileName": "c11.png" },
-                    { "fileName": "c12.png" },
-                    { "fileName": "c13.png" },
-                    { "fileName": "c14.png" },
-                    { "fileName": "c15.png" },
-                    { "fileName": "c16.png" }
+                let collection = [{
+                        "fileName": "c11.png"
+                    },
+                    {
+                        "fileName": "c12.png"
+                    },
+                    {
+                        "fileName": "c13.png"
+                    },
+                    {
+                        "fileName": "c14.png"
+                    },
+                    {
+                        "fileName": "c15.png"
+                    },
+                    {
+                        "fileName": "c16.png"
+                    }
                 ];
 
                 collection.forEach(function (item) {
@@ -326,13 +494,24 @@
             if (index == 3) {
 
                 $('#collection').empty();
-                let collection = [
-                    { "fileName": "c11.png" },
-                    { "fileName": "c12.png" },
-                    { "fileName": "c13.png" },
-                    { "fileName": "c14.png" },
-                    { "fileName": "c15.png" },
-                    { "fileName": "c16.png" }
+                let collection = [{
+                        "fileName": "c11.png"
+                    },
+                    {
+                        "fileName": "c12.png"
+                    },
+                    {
+                        "fileName": "c13.png"
+                    },
+                    {
+                        "fileName": "c14.png"
+                    },
+                    {
+                        "fileName": "c15.png"
+                    },
+                    {
+                        "fileName": "c16.png"
+                    }
                 ];
 
                 collection.forEach(function (item) {
@@ -345,11 +524,25 @@
 
 
             $(".collections_preview_images").on('click', function (e) {
-                console.log($(this).attr('src'));
+
                 let src = $(this).attr('src');
-                $('#preview_application_image_img').attr('src', src);
+                var imgObj = new Image();
+                imgObj.src = src;
+                imgObj.onload = function () {
+                    image = new fabric.Image(imgObj);
+                    image.set({
+                        angle: 0,
+                        padding: 10,
+                        cornersize: 10,
+                        height: 110,
+                        width: 110,
+                    });
+                    canvas.centerObject(image);
+                    canvas.remove(canvas.getActiveObject());
 
-
+                    canvas.add(image).setActiveObject(image);
+                    canvas.renderAll();
+                }
             });
         });
 
@@ -362,18 +555,14 @@
                 $(this).removeClass('active');
             });
             $(this).addClass('active');
+            image_application_method = $(this).text();
         });
         /*END section 3 image*/
-
-
-
-
-
-
-
         /*section 4 input text*/
 
         /*делаем красивый текст в select*/
+        let fontFamily;
+        let fontsize;
         let classSelectOption = $("#select option:selected").attr('class');
         let classSelectSize = $("#size option:selected").val();
         $('select').addClass(classSelectOption);
@@ -381,16 +570,22 @@
             let classSelectOption1 = $("#select option:selected").attr('class');
             $('select').removeAttr('class');
             $('select').addClass(classSelectOption1);
-            console.log(classSelectOption1);
+
+            fontFamily = classSelectOption1;
             $("#inputText").removeAttr('class');
             $("#inputText").addClass(classSelectOption1);
         });
         $("#size").change(function () {
             let classSelectSize1 = $("#size option:selected").val();
             $("#inputText").css("font-size", classSelectSize1 + "px");
+            fontsize = classSelectSize1;
         });
         /*изменяем поле ввода*/
         let colorText;
+        $(".text_bold").on('click', function () {
+            $("#inputText").toggleClass("bold")
+        });
+
         $('#description_text_choose_color svg').on('click', function () {
 
             colorText = $(this).css('fill');
@@ -399,186 +594,193 @@
         });
         /*изменяем поле ввода*/
         let textForApplication;
+        let boldText;
         $("#inputText").on('input', function () {
+
             let classSelectOption1 = $("#select option:selected").attr('class');
             $("#inputText").addClass(classSelectOption1);
 
             let classSelectSize1 = $("#size option:selected").val();
             $("#inputText").css("font-size", classSelectSize1 + "px");
 
-
-
             textForApplication = $(this).val();
-            console.log(textForApplication);
-
         });
+
+
+
         $(".btn_set_textApplication").on('click', function () {
-            let classSelectOption1 = $("#select option:selected").attr('class');
-            let classSelectSize1 = $("#size option:selected").val();
-            $("#preview_application_text").css("color", colorText);
-            $('#preview_application_text').addClass(classSelectOption1);
-            $('#preview_application_text').css("font-size", classSelectSize1 + "px");
-            console.log(textForApplication);
-
-            $('#preview_application_text span').text(textForApplication);
-
-        });
-
-/*перемещение текста по рисунку*/
-$("#preview_application_text").on('click', function(){
-    $("#preview_application_text").addClass('preview_application_text_content')
-
-
-
-});
-
-
-
-
-        $("#preview_application_text").mousedown(function (e) {
-            let x_start = e.pageX;
-            let y_start = e.pageY;
-            let x_end;
-            let y_end;
-
-            $(".preview_bigImage").mouseup(function (e) {
-                x_end = e.pageX;
-                y_end = e.pageY;
-                console.log(x_end, y_end);
-
-                /*координаты холста*/
-
-                let x2 = $(".preview_bigImage").position().left + $(".preview_bigImage").width();
-
-                let y2 = $(".preview_bigImage").position().top + $(".preview_bigImage").height();
-                console.log(x2, y2);
-                let x = x_end - $("#preview_application_text").width() / 2;
-                let y = y_end - $("#preview_application_text").height() / 2;
-                if (x_end < x2) {
-
-                    $('#preview_application_text').css("left", x + "px");
-                }
-                if (y_end < y2) {
-                    $('#preview_application_text').css("top", y + "px");
-                }
-
-
-
-
+            colorText = $("#inputText").css("color");
+            boldText = $("#inputText").css("font-weight");
+            if(fontsize == undefined){fontsize = "12px"}
+            var textbox = new fabric.IText(textForApplication, {
+                left: 50,
+                top: 50,
+                width: 150,
+                fontFamily: fontFamily,
+                fontSize:  fontsize + "",
+                fill: colorText + "",
+                fontWeight: boldText + "",
+                
             });
-
+            canvas.add(textbox).setActiveObject(textbox);
+            canvas.renderAll();
         });
+        $('.btn_del_textApplication').on('click', function () {
+            canvas.remove(canvas.getActiveObject());
+        });
+        $(".description_text .description_bottomChoose_li").on('click', function (e) {
 
-        /*END section 4 input text*/
-
+            $(".description_text .description_bottomChoose_li").each(function () {
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
+            text_application_method = $(this).text();
+        });
+  /*END section 4 input text*/
 
         /*section 5 size and amount */
 
         $(".description_size_and_amount .description_topChoose_li").on('click', function (e) {
             $(".description_size_and_amount .description_topChoose_li").each(function () {
                 $(this).removeClass('active');
+
             });
+
             $(this).addClass('active');
+            let ind = $(this).index();
+            let i = 0;
+
+            $(".description_size_and_amount_input_number").each(function () {
+                $(this).removeAttr("disabled");
+                if (i != ind) {
+                    $(this).attr("disabled", "disabled");
+                }
+                i++;
+            });
+        });
+        ////////////////////////////
+        /*result popup*/
+        $('.next_step_button').click(function () { //по клику на save
+            var object = canvas.toObject(); //достаём содержимое canvas и конверитруем в объект 
+            var canvas2 = new fabric.StaticCanvas('popup__canvas'); //создаём новый canvas
+            canvas2.loadFromJSON(object); // переписываем содержимое canvas в canvas 2
+
+            //в это же время забераем значения для попапа и выводим их в попап
+
+            if (activeSex == undefined) {
+                activeSex = "Man"
+            }
+            if (activeStyle == undefined) {
+                activeStyle = "T-Shirt"
+            }
+            if (cutout_Section2 == undefined) {
+                cutout_Section2 = "Round"
+            }
+            if (image_application_method == undefined) {
+                image_application_method = "Seridraphie"
+            }
+            if (text_application_method == undefined) {
+                text_application_method = "Seridraphie"
+            }
+            $('.result__sex').text(activeSex); //записываем выбранный пол
+            $('.result__style').text(activeStyle); //записываем выбранный стиль
+            $('.result__cutout').text(cutout_Section2);
+            $('.result__image_application_method').text(image_application_method);
+            $('.result__text_application_method').text(text_application_method);
+            //перебираем выбранные размеры и записываем значение тех,, у которых класс active в массив valSize
+            $(".description_size_and_amount_input_number").each(function () {
+                let id = "#result__amount" + $(this).index();
+                $(id).text($(this).val());
+            });
+        });
+        //    скачиваем готовое изображение
+
+        $('#download__pdf').click(function () {
+            $('#example').get(0).toBlob(function (blob) {
+                saveAs(blob, 'myIMG.png');
+            })
         });
 
-
-
-
         /*форма обратной связи */
-        $('#lp-fb1').wiFeedBack({
+    $('#lp-fb1').wiFeedBack({
             fbScript: 'blocks/wi-feedback.php',
             fbLink: '.lp-fb1-link',
-            fbColor: 'rgba(65, 107, 87, 0.75);'
+            fbColor: '#EA6C18;'
         });
         $('.form_for_save_inputs').after('<span class="span_required">*</span>');
         $("#confirm_1").after('<label for="confirm_1" class="form_for_save_label_checkbox">Text text text</label>');
         $("#confirm_2").after('<label for="confirm_2" class="form_for_save_label_checkbox">not robot</label>');
         /////////////////////////
+        
+        
 
 
 
 
-/*IMAGE TOOLS*/
-$('#magnifier').on('click', function(){
-    $('#example').addClass('magnifier');
-    $('#example').on('click', function(){
-        $('#example').removeClass('magnifier');  
-    });
-});
 
 
 
+
+
+
+
+
+        function saveImage() {
+            var dataURL = canvas.toDataURL();
+            $.ajax({
+                type: "POST",
+                url: "script.php",
+                data: { 
+                   imgBase64: dataURL
+                }
+              }).done(function(o) {
+                console.log('saved'); 
+                // If you want the file to be visible in the browser 
+                // - please modify the callback in javascript. All you
+                // need is to return the url to the file, you just saved 
+                // and than put the image in your browser.
+              });
+          };
+
+        /*IMAGE TOOLS*/
+        $('#magnifier').on('click', function () {
+            $('#example').addClass('magnifier');
+            $('#example').on('click', function () {
+                $('#example').removeClass('magnifier');
+            });
+        });
     });
 })(jQuery);
 
 
 
 document.addEventListener("DOMContentLoaded", function ready() {
-document.querySelector('#chooseColor').addEventListener('click', function(){
-     this.classList.toggle('chooseColor_active'); 
+            document.querySelector('#chooseColor').addEventListener('click', function () {
+                this.classList.toggle('chooseColor_active');
 
-        if(document.querySelector('#chooseColor').classList.contains('chooseColor_active')){ 
-        document.getElementById('color_picker').innerHTML = '<div id="color-picker" class="cp-default"> <div class="picker-wrapper"> <div id="picker" class="picker"></div>'+
-        '<div id="picker-indicator" class="picker-indicator"></div>'+
-                            '</div> <div class="pcr-wrapper">  <div id="pcr" class="pcr"></div>   <div id="pcr-indicator" class="pcr-indicator"></div>'+
-                                '</div>     </div>';
-            document.getElementById('color-picker').style.top = '0px';
-            document.getElementById('color-picker').style.left= '0px';
-          
-                cp = ColorPicker(document.getElementById('pcr'), document.getElementById('picker'), 
-                function(hex, mousePicker, mousepcr) {
-                currentColor = hex;
-                ColorPicker.positionIndicators(
-                document.getElementById('pcr-indicator'),
-                document.getElementById('picker-indicator'),
-                mousepcr, mousePicker);      
-                document.querySelector('#picker').addEventListener('click', function(){
-                    document.getElementById("inputText").style.color = hex;
-                   
-                });
+                if (document.querySelector('#chooseColor').classList.contains('chooseColor_active')) {
+                    document.getElementById('color_picker').innerHTML = '<div id="color-picker" class="cp-default"> <div class="picker-wrapper"> <div id="picker" class="picker"></div>' +
+                        '<div id="picker-indicator" class="picker-indicator"></div>' +
+                        '</div> <div class="pcr-wrapper">  <div id="pcr" class="pcr"></div>   <div id="pcr-indicator" class="pcr-indicator"></div>' +
+                        '</div>     </div>';
+                    document.getElementById('color-picker').style.top = '0px';
+                    document.getElementById('color-picker').style.left = '0px';
 
+                    cp = ColorPicker(document.getElementById('pcr'), document.getElementById('picker'),
+                        function (hex, mousePicker, mousepcr) {
+                            currentColor = hex;
+                            ColorPicker.positionIndicators(
+                                document.getElementById('pcr-indicator'),
+                                document.getElementById('picker-indicator'),
+                                mousepcr, mousePicker);
+                            document.querySelector('#picker').addEventListener('click', function () {
+                                document.getElementById("inputText").style.color = hex;
 
-                });
-            cp.setHex('#D4EDFB'); 
-           
-            
-
-
-        } else {
-            document.getElementById('color_picker').innerHTML = " "; 
-        }
-    
-    
-    }); 
-
-
-
-
-
+                            });
+                        });
+                    cp.setHex('#D4EDFB');
+                } else {
+                    document.getElementById('color_picker').innerHTML = " ";
+                }
+            });
 });
-
-
-
-
-
-
-
-
-/*
-window.onload = function() {
-    var drawingCanvas = document.getElementById('smile');
-    if(drawingCanvas && drawingCanvas.getContext) {
-     var context = drawingCanvas.getContext('2d');
-     // Создаем объект изображения
-var img = new Image();
-
-// Привязываем функцию к событию onload
-// Это указывает браузеру, что делать, когда изображение загружено
-img.onload = function() {
-	context.drawImage(img, 10, 10);
-};
-
-// Загружаем файл изображения
-img.src = "assets/collection1/ts_big_white_round.png";
-    }
-   }*/
