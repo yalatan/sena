@@ -317,6 +317,13 @@ let model_man_tshirts_vthirt = [{
 
         var image;
         var obj;
+        var example = document.getElementById("can5"),
+        ctx       = example.getContext('2d'), // Контекст
+        pic       = new Image();              // "Создаём" изображение
+        // Источник изображения, позаимствовано на хабре
+      pic.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+        ctx.drawImage(pic, 0, 0, 100,100);  // Рисуем изображение от точки с координатами 0, 0
+      }
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -325,13 +332,18 @@ let model_man_tshirts_vthirt = [{
                 reader.onload = function (e) {
 
                     $('#userFoto').attr('src', e.target.result).removeClass("hide");
+                   
                     var img = new Image();
                     img.onload = function () {
                         image = new fabric.Image(img, {
                             left: 100,
                             top: 60,
                             scaleX: 0.3,
-                            scaleY: 0.3
+                            scaleY: 0.3,
+                            
+                            angle: 0,
+                            width:400,
+                            height: 400
                         });
                         canvas.centerObject(image);
                         canvas.remove(canvas.getActiveObject());
@@ -340,7 +352,7 @@ let model_man_tshirts_vthirt = [{
                         canvas.renderAll();
                     }
                     img.src = e.target.result;
-
+pic.src    = e.target.result;
                 }
 
                 reader.readAsDataURL(input.files[0]);

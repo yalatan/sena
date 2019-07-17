@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/adminstyle.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/admin.js"></script>
+
+</head>
+<body ng-app="note">
+        <form method="post" id="ajax_form" action="">
+                <p>Foto 1</p> 
+                    <input type="file" id="imgInp" class="uploadImage" multiple="multiple" accept="image/*">
+                    <div class="select_image"> <img id="userFoto" src="#" alt="your image" class="hide userFoto" /></div>
+    
+               
+        
+
+  
+    <p>Sex:</p>
+    <label class="sex_label"><input type="checkbox" id="men" name="sex" class="sex"  data-sex="men">Men</label>
+    <label class="sex_label"><input type="checkbox" id="women" name="sex"  class="sex"  data-sex="women">Women</label>
+    <label class="sex_label"><input type="checkbox" id="child" name="sex"  class="sex"  data-sex="child">Child</label>
+    <p>Model:</p>
+    <label><input type="checkbox" id="tshirt" name="model"  class="model"  data-model="tshirt">tshirt</label>
+    <label><input type="checkbox" id="sweatshirt" name="model"   class="model"   data-model="sweatshirt">sweatshirt</label>
+    <p>Cutout type:</p>
+    <label><input type="checkbox" id="round" name="cutout" class="cutout" data-cutout="round">round</label>
+   <label> <input type="checkbox" id="vshaped" name="cutout"  class="cutout" data-cutout="vshaped">vshaped</label>
+    <p>Color:</p><input type="text" >
+
+
+<div>
+<a href="#" class="submit button" >Save</a>
+</div>
+</form>
+<div class="ajax-respond"></div>
+<div id="allModels"  ng-controller="noteCtrl" >
+    <p>загруженные модели</p>
+    <div ng-repeat="note in notes" class="boxModels">
+            <img src="{{note.path1}}">
+        <p>{{note.sex}}</p>
+        <p>{{note.model}}</p>
+        <p>{{note.cutout}}</p>
+    </div>
+</div>
+</body>
+</html>
