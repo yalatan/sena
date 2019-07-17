@@ -1,0 +1,17 @@
+.hide{
+    display: none;
+}
+.select_image{
+    width: 200px;
+}
+.userFoto{
+    width: 200px;
+}
+.boxModels{
+    border: 2px solid orange;
+    margin: 10px;
+    display: inline-block;
+}
+.boxModels img{
+    width: 150px;
+}
