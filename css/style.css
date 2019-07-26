@@ -15,14 +15,13 @@ a{
 }
 /*TOP*/
 .logo{  
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    top:2vw;
-    left:0;
+    width: 95%;
+    margin:  2.5vw auto auto auto;   
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(1, auto);
+    z-index: 99;
+    position: relative;
 }
 .logo_img{
     grid-area: 1/1/1/1;
@@ -69,70 +68,88 @@ a{
 }
 .header{
         width: 100%;
+        position: relative;
+        margin-top: -2.5vw;
+        z-index: 1;
 }
 .header img{
         width: 100%;
 }
+.header_div{
+    width: 100%;
+    position: absolute;
+    height: 24%;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding-top: 2%;
 
+}
+.header_text{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 65%;
+    margin: auto;
+}
 
 
 
 
 .constructor-steps {
-  
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin: 3vw auto;
+    margin: 4vw 5vw 4.4vw 5vw;
 }
 
 .constuctorw {
     text-align: center;
-    margin-left: 0;
+    width: 15%;
 }
-
-.constructor-steps__fleximg {
-    display: flex;
-    justify-content: center;
+.constuctor_arrow img{
+    margin-top: 45%;
 }
-
-.constructor-steps__arrow {
-    margin-top: ;
-}
-
-.constructor-steps__text {
-    font-weight: 400;
-    font-size: 22px;
-    font-family: 'Roboto', sans-serif;
-    white-space: nowrap;
-}
-
 .constructor-steps__steptext {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-        font-size: 1.3vw;
-    white-space: nowrap;
+    font-size: 1.1vw;
+    margin-top: 1vw;
 }
 
-
-
+.constructor-steps_text{
+    font-weight: 400;
+    font-size: 1.1vw;
+}
+.constructor-steps_lasttext{
+    font-weight: 400;
+    font-size: 1.4vw;
+    text-align: left;
+}
+.constructor-steps_lasttext p{
+    margin-top: 0px;
+    margin-left: 15%;
+}
 .sex-selection {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: auto 1vw;
 }
 .sex-selection img{
     width: 100%;
 }
 .sex-selection_men, .sex-selection_child, .sex-selection_women{
     position: relative;
-    width: 30vw;
-    height: 30vw;
+    width: 32%;
     padding: 0;
     margin: 0;
 }
 
 
 .sexselection__hover {
-    display: flex-block;
     position: absolute;
     left: 0;
     top: 0;
@@ -155,13 +172,18 @@ a{
 .sexselection__button-sweatshirt {
     background-color: rgba(157, 157, 157, 0.7);
     border: none;
-    font-size: 28px;
     font-weight: 500;
-    color: #fff;
+font-size: 28px;
+line-height: 33px;
+
+color: #FFFFFF;
+
 margin-bottom: 20px;
     padding: 10px;
 
-
+    width: 290px;
+    height: 81px;
+    border-radius: 8px;
 }
 
 .sexselection__hover:hover {
@@ -172,80 +194,80 @@ margin-bottom: 20px;
 
 
 .sexselection__button-shirt:hover {
-    background-color: #ea6c18
+    background-color: #ea6c18;
 }
 
 .sexselection__button-sweatshirt:hover {
-    background-color: #ea6c18
+    background-color: #ea6c18;
 }
 
 .announcement {
     display: flex;
-    width: 100%;
-   margin: 2vw auto;
+    margin: 4vw 3% 0vw 3%;
+    height: 15vw;
 }
-
+.announcement__img-shirt img{
+    margin-top: -2vw;
+}
 .announcement__left, .announcement__right  {
     display: flex;
+    margin-left: 3%;
     width: 50%;
-   
 }
+.announcement__img-shirt{
+}
+.announcement_image{
+    height: 85%;
+}
+
 .announcement__text  {
   text-align: center; 
+  width: 80%;
 }
 .announcement__text h2 {
-   font-size: 1.75vw; 
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 1.5vw;
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
 .announcement__text_text{
-      text-align: left;
+    text-align: left;
     font-size: 1.3vw;
+    width: 70%;
 }
 .method{
-    display: flex;
-        display: flex;
     font-size: 1.3vw;
+    margin-top: 2vw;
 }
-.announcement__text_span_right{
-    text-align: right;
-    margin-right: 25px
+.method span{
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
-    
-.announcement__text_span_left{
-    text-align: left;
-}
-.announcement__text_span_right p, .announcement__text_span_left p{
-    margin-top: 15px;
-} 
-.wanna-try {
-   
+
+.wanna-try {   
     width: 100%;
 position: relative;
     justify-content: center;
     align-items: center;
 
 }
-.wanna-try img {
-   
+.wanna-try img {   
     width: 100%;
-
 }
 
-
-
 .wanna-try__btn {
-  position: absolute;
-    top: 45%;
+    position: absolute;
+    top: 40%;
     left: 40%;
-    width: 18vw;
+    width: 20%;
     height: 5vw;
     background-color: #EA6C18;
     cursor: pointer;
-    box-shadow: 0;
     color: #fff;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 500;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 button:focus {
@@ -257,10 +279,17 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
 }
 
-.aboutUs__img, .aboutUs__text {
-    width: 50%;
+.aboutUs__img{
+    width: 25%;
+    margin-left: -4%;
+    margin-right: 0%;
+}
+.aboutUs__text {
+    width: 60%;
 }
 .aboutUs__img img{
     width: 100%;
@@ -268,25 +297,160 @@ button:focus {
 .aboutUs__text {
     font-size: 2vw;
 }
-
+.gallery{
+    margin: auto 1% auto 1%;
+}
 .lp-slider1 div .active{
     border-bottom: none;
 }
+.item{
+width: 90%;
+}
 .footer {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 80% 20%;
     padding-bottom: 20px;
+    margin: 2% 13% auto 11%;
+}
+.footer__text{
+    font-size: 1.3vw;
+}
+.footer__text a{
+    margin-right: -1%;
+    margin-left: 3%;
+    border-bottom: 1px solid black;
+    color: black;
+}
+.footer span {
+    grid-area: 1/1/1/1;  
 }
 
-.footer span {
-    grid-area: 1/1/1/1;
-  
-}
-.footer a{
-        margin-right: 5px;
-}
 .footer_links{
     text-align: right;
 }
+.footer_links a{
+    margin-right: 4%;
+    margin-left: 3%;
+}
+.cookie{
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+   }
+.cookie_top{
+    max-width: 90vw;
+    min-width: 360px;
+    margin: 0 auto;
+    background: #DADADA;
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+.cookie_top_orangeText{
+    color: #ea6c18;
+    border-bottom: 1px solid #ea6c18;
+    margin-left: 1px;
+}
+.cookie_btn_ok{
+    cursor: pointer;
+}
+.cookie_top_div{
+    margin-left: 5%;
+    margin-right: 3%;
+    text-align: center;
+}
+.cookie_top_ok{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.hide{
+    display: none;
+}
+.po-pup{
+    z-index: 105;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(218,218,218, 0.7);
+    opacity: 1.3;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+.popup_main{
+    background: #fff;
+    border-radius: 8px;
+    width: 423px;
+    height: 65vh;
+    margin: 15vh auto;
+    text-align: left;
+    padding: 3%;
+    position: relative;
+}
+.popup_main h3{
+    font-size: 2rem;
+     margin: 3% auto;
+     font-weight: normal;
+line-height: 47px;
 
+letter-spacing: 0.065em;
+ }
+.popup_main p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.065em;
+    margin: 3% auto;
+}
+.popup_main label{
+font-size: 12px;
+line-height: 120.19%;
+letter-spacing: 0.065em;
+}
+.cookie_btn_agree{
+    position: absolute;
+    left: 35%;
+    width: 18%;
+    background-color: #EA6C18;
+    cursor: pointer;
+    color: #fff;
+    font-size:  1.5rem;
+    font-weight: 500;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    bottom: 6%;
+}
+.close_popup_main{
+    position: absolute;
+    top: -58px;
+    right: -35px;
+    font-size: 50px; 
+   cursor: pointer;
+   color: #fff;
+}
+.discription_cookies h3{
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;    
+    color: #000000;
+    text-align: center;
+    margin: 5vh auto;
+}
+.discription_cookies p{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;    
+    color: #000000;
+}
+.discription_cookies_p_space{
+    margin-top: 10px;
+}

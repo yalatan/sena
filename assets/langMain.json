@@ -1,0 +1,165 @@
+{
+ "en":   {
+"headerImage_part1": "Realise your design",
+"headerImage_part2": "Personalise with SENA",
+"section_constructorSteps_1": "Choose your sex",     
+"section_constructorSteps_2": "Choose your style",
+ "tshirt": "T-shirt",
+ "sweatshirt": "Sweatshirt",  
+"section_constructorSteps_3": "Choose your image, text and the application method",
+"section_constructorSteps_4": "Choose your text", 
+"section_constructorSteps_5": "Choose your size", 
+"section_constructorSteps_6": "Press SAVE", 
+"section_constructorSteps_7part1": "Et... voilà!", 
+"section_constructorSteps_7part2": "Your personal design is ready.", 
+
+"section_sex_selection_buttonTop": "T-SHIRT", 
+
+"section_sex_selection_buttonBottom": "SWEATSHIRT", 
+
+"section_announcementLeft_header": "We can make your ideas come true!", 
+"section_announcementLeft_text": "Look through our Library of images or download your own. Make your personal style alive.", 
+"section_announcementRight_header_p1": "We have different types of application.", 
+"section_announcementRight_header_p2": "Choose yours!", 
+"section_announcementRight_methodApplication_1":  "Sérigraphie ", 
+"section_announcementRight_methodApplication_2":  "Broderie ", 
+"section_announcementRight_methodApplication_3":  " Écusson", 
+"section_announcementRight_methodApplication_4":  " TRANSFERT TEXTILE", 
+"section_wanna_try":  "WANNA TRY", 
+"section_aboutUs":  "We have more than 30 years of experience! We can assure you in the quality of our T-shirts and Sweatshirts. ", 
+"copyright":  "Copyrights", 
+"footerCookies1":  "Mentions légales ", 
+"footerCookies2":  " Gérer les cookies",
+"cookie_top_part1": "English continuant, vous acceptez l'utilisation des cookies pour disposer de services adaptés.",
+"cookie_top_part2": "English savoir plus et gérer les cookies.",
+"cookie_text_part1": "Lorsque vous naviguez sur notre site internet, des informations sont susceptibles d'être enregistrées, ou lues, dans votre terminal, sous réserve de vos choix.",
+
+"cookie_text_part2": "Acceptez-vous le dépôt et la lecture de cookies afin de vous proposer toutes les fonctionnalités de notre site internet.",
+"cookie_text_part3": "Acceptez-vous le dépôt et la lecture de cookies afin d'analyser votre navigation et nous permettre de mesurer l'audience de notre site internet.",
+"cookie_text_part4": "Acceptez-vous le dépôt et/ou la lecture de cookies pour vous permettre de partager des contenus de notre site avec d'autres personnes ou de faire connaître à ces autres personnes votre consultation ou votre opinion",
+ 
+ "cookie_text_part5": "(boutons J'aime de Facebook par exemple).",
+ "cookie_agree": "En soumettant ce formulaire, j'accepte que les informations  saisies soient exploitées dans le cadre strict de ma demande.",
+ "cookie_button_agree": "agree",
+ "cookies_discription_header": "ENG Mentions Légales",
+ "cookies_discription_text1": "ENG  1. Présentation de notre site web",
+ "cookies_discription_text2": "ENG  Conformément à la loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique, notre site web créé par Alexandre Kosmala, propriétaire du site www.main-gauche.com, met à disposition du public les informations concernant notre entreprise.",
+ "cookies_discription_text3": "ENG  Eventuellement modifiables, nous vous invitons donc à consulter nos mentions légales le plus souvent possible, de manière à en prendre connaissance fréquemment",
+ 
+ "cookies_discription_text4": "ENG  Le site www.main-gauche.com appartient à Alexandre Kosmala - SARL - SIRET: 50385145300020, dont le siège social est situé à l'adresse suivante : 809 rue Favre de St Castor, Immeuble Green Valley lot C et C', 34080 Montpellier.",
+"cookies_discription_text5": " ENG  Personne physique ou morale, Alexandre Kosmala est responsable de la publication, dont l'adresse e-mail est la suivante : contact@main-gauche.com",
+"cookies_discription_text6": " ENG  Le site www.main-gauche.com est hébergé par OVH, dont le siège social est localisé à l'adresse suivante : 2 rue Kellermann - 59100 Roubaix - France.",
+ 
+ "cookies_discription_text7": "ENG  2. Conditions générales d’utilisation du site et des services proposés.",
+ "cookies_discription_text8": "ENG  En utilisant notre site web www.main-gauche.com, vous acceptez pleinement et entièrement les conditions générales d'utilisation précisées dans nos mentions légales. Accessible à tout type de visiteurs, il est important de préciser toutefois qu'une interruption pour maintenance du site web peut-être décidée par Alexandre Kosmala. Les dates et heures d'interruptions seront néanmoins précisées à l'avance aux utilisateurs.",
+ 
+ "cookies_discription_text9": "3. Les produits ou services proposés par www.main-gauche.com",
+ "cookies_discription_text10": "En accord avec sa politique de communication, le site www.main-gauche.com a pour vocation d'informer les utilisateurs sur les services proposés par Alexandre Kosmala, qui s'efforce alors de fournir des informations précises sur son activité. Cependant, des inexactitudes ou des omissions peuvent exister : la société ne pourra en aucun cas être tenue pour responsable pour toute erreur présente sur le site www.main-gauche.com.",
+ 
+ "cookies_discription_text11": "4. Limitations contractuelles",
+ "cookies_discription_text12": "Les informations retranscrites sur notre site web www.main-gauche.com font l’objet de démarches qualitatives, en vue de nous assurer de leur fiabilité. Cependant, nous ne pourrons encourir de responsabilités en cas d’inexactitudes techniques lors de nos explications.",
+ "cookies_discription_text13": "Si vous constatez une erreur concernant des informations que nous auront pu omettre, n’hésitez pas à nous le signaler par mail à contact@main-gauche.com.",
+ 
+ "cookies_discription_text14": "Les liens reliés directement ou indirectement à notre site web www.main-gauche.com ne sont pas sous le contrôle de notre société. Par conséquent, nous ne pouvons nous assurer de l’exactitude des informations présentes sur ces autres sites Internet.",
+ 
+ "cookies_discription_text15": "Utilisant la technologie JavaScript, le site www.main-gauche.com ne pourra être tenu pour responsable en cas de dommages matériels liés à son utilisation. Par ailleurs, toute autre type de conséquence liée à l'exploitation du site www.main-gauche.com, qu'elle soit direct ou indirect (bug, incompatibilité, virus, perte de marché, etc.).",
+ 
+ "cookies_discription_text16": "5. Propriété intellectuelle et contenu du site Internet",
+ "cookies_discription_text17": "Le contenu rédactionnel du site web www.main-gauche.com appartient exclusivement à Alexandre Kosmala. Toute violation des droits d’auteur est sanctionnée par l’article L.335-2 du Code de la Propriété Intellectuelle, avec une peine encourue de 2 ans d’emprisonnement et de 150 000€ d’amende",
+ 
+ "cookies_discription_text18": "Le site www.main-gauche.com ne pourra être mis en cause en cas de propos injurieux, à caractère raciste, diffamant ou pornographique, échangés sur les espaces interactifs. La société se réserve également le droit de supprimer tout contenu contraire aux valeurs de l'entreprise ou à la législation applicable en France.",
+ 
+ "cookies_discription_text19": "En naviguant sur le site www.main-gauche.com, l'utilisateur accepte également l'installation de cookies éventuelle sur son ordinateur.",
+ 
+ "cookies_discription_text20": "6. Données personnelles, respect de votre vie privée et de vos libertés",
+ "cookies_discription_text21": "Toute informations recueillie sur le site web www.main-gauche.com se font dans le cadre des besoins liés à l'utilisation de notre plateforme, tels que le formulaire de commande ou la demande d'inscription à la Newsletter. Par ailleurs, le désabonnement de la Newsletter se fait grâce au lien situé en pied de page.",
+ "cookies_discription_text22": "Alexandre Kosmala s'engage à ne céder en aucun cas les informations concernant les utilisateurs du site Internet, de quelque façon qu'il soit (vente, échange, prêt, location, don).",
+ 
+ "cookies_discription_text23": "Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004, l’utilisateur bénéficie d’un droit d’accès et de rectification aux informations le concernant, droit qu’il peut exercer à tout moment en adressant un mail à l’adresse contact@main-gauche.com, ou en effectuant sa demande par courrier, à l’adresse suivante : 809 rue Favre de St Castor, Immeuble Green Valley lot C et C', 34080 Montpellier.",
+ 
+ "cookies_discription_text24": "7. Droit applicable et lois concernées",
+ "cookies_discription_text25": "Soumis au droit français, le site web www.main-gauche.com est encadré par la loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique, l’article L.335-2 du Code de la Propriété Intellectuelle et la loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004."
+ 
+},
+"fr": {"headerImage_part1": "FR Realise your design",
+    "headerImage_part2": "FR Personalise with SENA",
+
+"section_constructorSteps_1": "FR Choose your sex",     
+"section_constructorSteps_2": "Choose your style",
+ "tshirt": "T-shirt",
+ "sweatshirt": "Sweatshirt",  
+"section_constructorSteps_3": "Choose your image, text and the application method",
+"section_constructorSteps_4": "Choose your text", 
+"section_constructorSteps_5": "Choose your size", 
+"section_constructorSteps_6": "Press SAVE", 
+"section_constructorSteps_7part1": "Et... voilà!", 
+"section_constructorSteps_7part2": "Your personal design is ready.", 
+
+"section_sex_selection_buttonTop": "T-SHIRT", 
+
+"section_sex_selection_buttonBottom": "SWEATSHIRT", 
+
+"section_announcementLeft_header": "FR We can make your ideas come true!", 
+"section_announcementLeft_text": "Look through our Library of images or download your own. Make your personal style alive.", 
+"section_announcementRight_header_p1": " FRWe have different types of application.", 
+"section_announcementRight_header_p2": " FRChoose yours!", 
+"section_announcementRight_methodApplication_1":  "Sérigraphie ", 
+"section_announcementRight_methodApplication_2":  "Broderie ", 
+"section_announcementRight_methodApplication_3":  " Écusson", 
+"section_announcementRight_methodApplication_4":  " TRANSFERT TEXTILE", 
+"section_wanna_try":  "WANNA TRY", 
+"section_aboutUs":  "We have more than 30 years of experience! We can assure you in the quality of our T-shirts and Sweatshirts. ", 
+"copyright":  "Copyrights", 
+"footerCookies1":  "Mentions légales ", 
+"footerCookies2":  " Gérer les cookies",
+"cookieToppart1": "En continuant, vous acceptez l'utilisation des cookies pour disposer de services adaptés.",
+"cookieToppart2": "En savoir plus et gérer les cookies.",
+"cookie_text_part1": "Lorsque vous naviguez sur notre site internet, des informations sont susceptibles d'être enregistrées, ou lues, dans votre terminal, sous réserve de vos choix.",
+"cookie_text_part2": "Acceptez-vous le dépôt et la lecture de cookies afin de vous proposer toutes les fonctionnalités de notre site internet.",
+"cookie_text_part3": "Acceptez-vous le dépôt et la lecture de cookies afin d'analyser votre navigation et nous permettre de mesurer l'audience de notre site internet.",
+"cookie_text_part4": "Acceptez-vous le dépôt et/ou la lecture de cookies pour vous permettre de partager des contenus de notre site avec d'autres personnes ou de  faire connaître à ces autres personnes votre consultation ou votre opinion",
+ "cookie_text_part5": "(boutons J'aime de Facebook par exemple).",
+ "cookie_agree": "En soumettant ce formulaire, j'accepte que les informations  saisies soient exploitées dans le cadre strict de ma demande.",
+ "cookie_button_agree": "fermer",
+ "cookies_discription_header": "Mentions Légales",
+ "cookies_discription_text1": "1. Présentation de notre site web",
+ "cookies_discription_text2": "Conformément à la loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique, notre site web créé par Alexandre Kosmala, propriétaire du site www.main-gauche.com, met à disposition du public les informations concernant notre entreprise.",
+ "cookies_discription_text3": "Eventuellement modifiables, nous vous invitons donc à consulter nos mentions légales le plus souvent possible, de manière à en prendre connaissance fréquemment",
+ 
+ "cookies_discription_text4": "Le site www.main-gauche.com appartient à Alexandre Kosmala - SARL - SIRET: 50385145300020, dont le siège social est situé à l'adresse suivante : 809 rue Favre de St Castor, Immeuble Green Valley lot C et C', 34080 Montpellier.",
+"cookies_discription_text5": " Personne physique ou morale, Alexandre Kosmala est responsable de la publication, dont l'adresse e-mail est la suivante : contact@main-gauche.com",
+"cookies_discription_text6": " Le site www.main-gauche.com est hébergé par OVH, dont le siège social est localisé à l'adresse suivante : 2 rue Kellermann - 59100 Roubaix - France.",
+ 
+ "cookies_discription_text7": "2. Conditions générales d’utilisation du site et des services proposés.",
+ "cookies_discription_text8": "En utilisant notre site web www.main-gauche.com, vous acceptez pleinement et entièrement les conditions générales d'utilisation précisées dans nos mentions légales. Accessible à tout type de visiteurs, il est important de préciser toutefois qu'une interruption pour maintenance du site web peut-être décidée par Alexandre Kosmala. Les dates et heures d'interruptions seront néanmoins précisées à l'avance aux utilisateurs.",
+ 
+ "cookies_discription_text9": "3. Les produits ou services proposés par www.main-gauche.com",
+ "cookies_discription_text10": "En accord avec sa politique de communication, le site www.main-gauche.com a pour vocation d'informer les utilisateurs sur les services proposés par Alexandre Kosmala, qui s'efforce alors de fournir des informations précises sur son activité. Cependant, des inexactitudes ou des omissions peuvent exister : la société ne pourra en aucun cas être tenue pour responsable pour toute erreur présente sur le site www.main-gauche.com.",
+ 
+ "cookies_discription_text11": "4. Limitations contractuelles",
+ "cookies_discription_text12": "Les informations retranscrites sur notre site web www.main-gauche.com font l’objet de démarches qualitatives, en vue de nous assurer de leur fiabilité. Cependant, nous ne pourrons encourir de responsabilités en cas d’inexactitudes techniques lors de nos explications.",
+ "cookies_discription_text13": "Si vous constatez une erreur concernant des informations que nous auront pu omettre, n’hésitez pas à nous le signaler par mail à contact@main-gauche.com.",
+ 
+ "cookies_discription_text14": "Les liens reliés directement ou indirectement à notre site web www.main-gauche.com ne sont pas sous le contrôle de notre société. Par conséquent, nous ne pouvons nous assurer de l’exactitude des informations présentes sur ces autres sites Internet.",
+ 
+ "cookies_discription_text15": "Utilisant la technologie JavaScript, le site www.main-gauche.com ne pourra être tenu pour responsable en cas de dommages matériels liés à son utilisation. Par ailleurs, toute autre type de conséquence liée à l'exploitation du site www.main-gauche.com, qu'elle soit direct ou indirect (bug, incompatibilité, virus, perte de marché, etc.).",
+ 
+ "cookies_discription_text16": "5. Propriété intellectuelle et contenu du site Internet",
+ "cookies_discription_text17": "Le contenu rédactionnel du site web www.main-gauche.com appartient exclusivement à Alexandre Kosmala. Toute violation des droits d’auteur est sanctionnée par l’article L.335-2 du Code de la Propriété Intellectuelle, avec une peine encourue de 2 ans d’emprisonnement et de 150 000€ d’amende",
+ 
+ "cookies_discription_text18": "Le site www.main-gauche.com ne pourra être mis en cause en cas de propos injurieux, à caractère raciste, diffamant ou pornographique, échangés sur les espaces interactifs. La société se réserve également le droit de supprimer tout contenu contraire aux valeurs de l'entreprise ou à la législation applicable en France.",
+ 
+ "cookies_discription_text19": "En naviguant sur le site www.main-gauche.com, l'utilisateur accepte également l'installation de cookies éventuelle sur son ordinateur.",
+ 
+ "cookies_discription_text20": "6. Données personnelles, respect de votre vie privée et de vos libertés",
+ "cookies_discription_text21": "Toute informations recueillie sur le site web www.main-gauche.com se font dans le cadre des besoins liés à l'utilisation de notre plateforme, tels que le formulaire de commande ou la demande d'inscription à la Newsletter. Par ailleurs, le désabonnement de la Newsletter se fait grâce au lien situé en pied de page.",
+ "cookies_discription_text22": "Alexandre Kosmala s'engage à ne céder en aucun cas les informations concernant les utilisateurs du site Internet, de quelque façon qu'il soit (vente, échange, prêt, location, don).",
+ 
+ "cookies_discription_text23": "Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004, l’utilisateur bénéficie d’un droit d’accès et de rectification aux informations le concernant, droit qu’il peut exercer à tout moment en adressant un mail à l’adresse contact@main-gauche.com, ou en effectuant sa demande par courrier, à l’adresse suivante : 809 rue Favre de St Castor, Immeuble Green Valley lot C et C', 34080 Montpellier.",
+ 
+ "cookies_discription_text24": "7. Droit applicable et lois concernées",
+ "cookies_discription_text25": "Soumis au droit français, le site web www.main-gauche.com est encadré par la loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique, l’article L.335-2 du Code de la Propriété Intellectuelle et la loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004."
+ 
+
+}
+}

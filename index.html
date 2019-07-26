@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,11 @@
      
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/angular.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body  ng-controller="myCtrl">
     <div class="container">
         <div class="logo">
             <div class="logo_img"> <img src="images/logo@2x.png" alt="">         
@@ -26,103 +27,105 @@
                 </span>
                 <span class="logo_basket" ><img src="images/shopping-cart.png" alt="" >                            
                 </span>
-                <span class="logo_language active" >fr</span>
-                <span class="logo_language" >en</span>
+                <span class="logo_language active" ng-click="chooseLang('fr')">fr</span>
+                <span class="logo_language"  ng-click="chooseLang('en')">en</span>
                 </div>
         </div>
-        <div class="header"><img src="images/bgheader.png" alt=""></div>
+        <div class="header"><img src="images/bgheader.png" alt="">
+            <div class="header_div"><p class="header_text">{{mainlang.headerImage_part1}} - </p> <p  class="header_text">{{mainlang.headerImage_part2}} </p></div>
+        </div>
     
         <div class="constructor-steps">
-            <div class="constructor-steps__fleximg">
+
                 <div class="constuctorw"><img src="/images/steps1.png" alt="" class="constructor-steps__stepsimg">
-                    <p class="constructor-steps__steptext">Choose your <br> sex </p>
-
+                    <p class="constructor-steps__steptext">{{mainlang.section_constructorSteps_1}}</p>
                 </div>
-                <div class="constuctorw"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
+                <div class="constuctor_arrow"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
                 <div class="constuctorw"><img src="/images/steps2.png" alt="" class="constructor-steps__stepsimg">
-                    <p class="constructor-steps__steptext">Choose your style:<br>T-shirt<br> Sweatshirt</p>
+                    <p class="constructor-steps__steptext">{{mainlang.section_constructorSteps_2}}:</p>
+                    <p  class="constructor-steps_text">{{mainlang.tshirt}}</p>
+                    <p  class="constructor-steps_text"> {{mainlang.sweatshirt}}</p>
                 </div>
-                <div class="constuctorw"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
+                <div class="constuctor_arrow"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
                 <div class="constuctorw"><img src="/images/steps3.png" alt="" class="constructor-steps__stepsimg">
-                    <p class="constructor-steps__steptext">Choose your image <br> and
-                        <br> the application method</p>
+                    <p class="constructor-steps__steptext">{{mainlang.section_constructorSteps_3}}</p>
                 </div>
-                <div class="constuctorw"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
+                <div class="constuctor_arrow"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
 
-                <div class="constuctorw"><img src="/images/steps4.png" alt="" class="constructor-steps__stepsimg">
-                    <p class="constructor-steps__steptext">Choose your text</p>
-                </div>
-                <div class="constuctorw"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
+               
                 <div class="constuctorw"><img src="/images/steps5.png" alt="" class="constructor-steps__stepsimg">
-                    <p class="constructor-steps__steptext">Choose<br>your size </p>
+                    <p class="constructor-steps__steptext">{{mainlang.section_constructorSteps_5}}</p>
                 </div>
-                <div class="constuctorw"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
+                <div class="constuctor_arrow"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
                 <div class="constuctorw"><img src="/images/steps6.png" alt="" class="constructor-steps__stepsimg">
-                    <p class="constructor-steps__steptext">Press SAVE</p>
+                    <p class="constructor-steps__steptext">{{mainlang.section_constructorSteps_6}}</p>
                 </div>
-                <div class="constuctorw"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
-                <div class="constuctorw constructor-steps__text">Et... voilà!<br>
-                    Your personal<br> design is ready.</div>
-            </div>
-
-
-
-
-
-
-
-
-
+                <div class="constuctor_arrow"><img src="/images/right-arrow.png" alt="" class="constructor-steps__arrow"></div>
+                <div class="constuctorw constructor-steps_lasttext">
+                    <p>{{mainlang.section_constructorSteps_7part1}}</p>
+                    <p>{{mainlang.section_constructorSteps_7part2}}</p>
+                    </div>
+            
 
         </div>
         <div class="sex-selection">
             <div class="sex-selection_men">
                 <div><img src="/images/men.png" alt="" class="sexselection__img"></div>
                 <div class="sexselection__hover">
-                <div><a href=""><button class="sexselection__button-shirt">T-Shirt</button></a><br>
-                <a href=""><button class="sexselection__button-sweatshirt">Sweatshirt</button></a></div>
+                    <div><a href=""><button
+                                class="sexselection__button-shirt">{{mainlang.section_sex_selection_buttonTop}}</button></a><br>
+                        <a href=""><button
+                                class="sexselection__button-sweatshirt">{{mainlang.section_sex_selection_buttonBottom}}</button></a>
+                    </div>
+                </div>
             </div>
+        
+        <div class="sex-selection_women">
+        
+            <div><img src="/images/women.png" alt="" class="sexselection__img"></div>
+            <div class="sexselection__hover">
+                <div><a href=""><button
+                            class="sexselection__button-shirt">{{mainlang.section_sex_selection_buttonTop}}</button></a><br>
+                    <a href=""><button
+                            class="sexselection__button-sweatshirt">{{mainlang.section_sex_selection_buttonBottom}}</button></a>
+                </div>
             </div>
-            
-            
-             <div class="sex-selection_women">
-            
-                 <div><img src="/images/women.png" alt="" class="sexselection__img"></div>
-                <div class="sexselection__hover">
-                <div><a href=""><button class="sexselection__button-shirt">T-Shirt</button></a><br>
-                <a href=""><button class="sexselection__button-sweatshirt">Sweatshirt</button></a></div>
+        </div>
+        <div class="sex-selection_child">
+            <div><img src="/images/child.png" alt="" class="sexselection__img"></div>
+        
+            <div class="sexselection__hover">
+                <div><a href=""><button
+                            class="sexselection__button-shirt">{{mainlang.section_sex_selection_buttonTop}}</button></a><br>
+                    <a href=""><button
+                            class="sexselection__button-sweatshirt">{{mainlang.section_sex_selection_buttonBottom}}</button></a>
+                </div>
             </div>
-            </div>
-         <div class="sex-selection_child">   <div><img src="/images/child.png" alt="" class="sexselection__img"></div>
-            
-             <div class="sexselection__hover">
-               <div><a href=""><button class="sexselection__button-shirt">T-Shirt</button></a><br>
-                <a href=""><button class="sexselection__button-sweatshirt">Sweatshirt</button></a></div>
-            </div></div>
+        </div>
+
+
         </div>
         
-
+        
         <div class="announcement">
             <div class="announcement__left">
-                <div class="announcement__img-shirt"><img src="/images/anons1.png" alt=""></div>
-                <div class="announcement__text">
-                    <h2 > We can make your ideas come true!</h2>
-                    <p class="announcement__text_text"> Look through our Library of <br> images or download your own. <br>Make your personal style alive. </p>
+                <div class="announcement__img-shirt"><img  class="announcement_image" src="/images/anons1.gif" alt=""></div>
+                <div class="announcement__text">            <h2 >{{mainlang.section_announcementLeft_header}}</h2>
+                    <p class="announcement__text_text">{{mainlang.section_announcementLeft_text}}</p>
                 </div>
                
             </div>
             <div class="announcement__right">
-                 <div class="announcement__img-thread"><img src="/images/anons2.png" alt=""></div>
+                 <div class="announcement__img-thread"><img  class="announcement_image" src="/images/anons2.gif" alt=""></div>
                 <div class="announcement__text">
-                    <h2 > We have different types of application.<br>Choose yours!</h2>
+                    <h2 > {{mainlang.section_announcementRight_header_p1}}<br>{{mainlang.section_announcementRight_header_p2}}</h2>
                      <div class="method">
-                 <div class="announcement__text_span_right">      
-                <p>SERIGRAPHIE (FLOCAGE)</p>
- <p>LA BRODERIE</p></div> 
-                 <div  class="announcement__text_span_left">    <p> L’ECUSSON TISSE ET BRODE</p>
-               
+                     
+                <span>{{mainlang.section_announcementRight_methodApplication_1}}</span>
+ <span>{{mainlang.section_announcementRight_methodApplication_2}}</span>
+ <span> {{mainlang.section_announcementRight_methodApplication_3}}</span>
 
-                    <p >TRANSFERT TEXTILE</p></div> 
+                
                 </div>
                 </div>
                 </div>
@@ -133,7 +136,7 @@
         <div class="wanna-try">
           
             <img src="images/wanna_trybg.png" > 
-            <div><a class="wanna-try__url" href="constructor.html" target="_blank"><button class="wanna-try__btn">Wanna try</button></a></div>
+            <div><a class="wanna-try__url" href="constructor.html" target="_blank"><button class="wanna-try__btn">{{mainlang.section_wanna_try}}</button></a></div>
 
 
 
@@ -141,8 +144,8 @@
         </div>
         <div class="aboutUs">
 
-            <div class="aboutUs__img"><img src="/images/aboutUS.png" alt=""></div>
-            <div class="aboutUs__text">We have more than 30 years of experience!<br> We can assure you in the quality of our<br> T-shirts and Sweatshirts.</div>
+            <div class="aboutUs__img"><img src="/images/aboutUS.gif" alt=""></div>
+            <div class="aboutUs__text">{{mainlang.section_aboutUs}}</div>
 
 
         </div>
@@ -161,14 +164,34 @@
         </div>
         <div class="footer">
             
-                <div class="footer__text"> Copyrights &#169; 2019 Sena <ins> Mentions légales</ins> <ins>Gérer les cookies </ins></div>
+                <div class="footer__text"> 
+                    <p>{{mainlang.copyright}}&#169; 2019 Sena <a href="desktopCookies.html"> {{mainlang.footerCookies1}}</a> <a href="#" id="cookies_bottom">{{mainlang.footerCookies2}} </a></p>
+                </div>
            <div  class="footer_links">
             <a href="https://www.instagram.com/?hl=ru"><img src="/images/instagram-logo.png" alt=""></a>
            <a href="https://www.facebook.com/"><img src="/images/facebook-logo.png" alt=""></a></div>
 
+        </div>    
+        <div  class="cookie">
+        <div class="cookie_top hide" id="cookie_top">
+            <div class="cookie_top_div"><p>{{mainlang.cookieToppart1}}<a href="#"  class="cookie_top_orangeText">{{mainlang.cookieToppart2}}</a></p></div>
+                <div class="cookie_top_ok"><span class="cookie_btn_ok">OK</span></div>
+        </div></div>  
+
+        <div class="po-pup hide">
+            <div class="popup_main">
+            <h3>Cookies</h3>
+            <p>{{mainlang.cookie_text_part1}}</p>
+            <p>{{mainlang.cookie_text_part2}}</p>
+            <p>{{mainlang.cookie_text_part3}}</p>
+            <p>{{mainlang.cookie_text_part4}} {{mainlang.cookie_text_part5}}</p>
+            <label><input type="checkbox"> {{mainlang.cookie_agree}} </label>
+            <p><span class="cookie_btn_agree"> {{mainlang.cookie_button_agree}} </span></p>
+            <span class="close_popup_main">x</span>
+        </div>
         </div>
     </div>
-
+  
 </body>
 
 </html>

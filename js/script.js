@@ -1,5 +1,21 @@
 (function ($) {
     $(document).ready(function () {  
+
+        function cookie() {
+            $("#cookie_top").removeClass("hide");
+          }
+          
+          setTimeout(cookie, 3000);
+$(".cookie_btn_ok").click(function(){
+    $("#cookie_top").addClass("hide");
+});
+$(".cookie_top_orangeText, #cookies_bottom").click(function(){
+    $(".po-pup").removeClass("hide");
+});
+$(".close_popup_main").click(function(){
+    $(".po-pup").addClass("hide");
+});
+
     
  $('.logo_language').click(function(){
      $('.logo_language').each(function () {
@@ -42,3 +58,28 @@
     
 });
 })(jQuery);
+
+
+
+//choosing language//
+let app = angular.module('myApp', []);
+app.controller('myCtrl', function ($scope, $http) {
+
+  $http.get('assets/langMain.json')
+             .then(function(res){
+                $scope.language = res.data;     
+                console.log($scope.language);   
+                $scope.mainlang = res.data.fr;  
+                console.log($scope.mainlang);       
+              });
+
+   
+   $scope.chooseLang = function(elem){
+    
+    $scope.mainlang = $scope.language[elem];
+    console.log($scope.mainlang);
+   };
+  
+
+   
+});
