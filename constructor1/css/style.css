@@ -1,0 +1,268 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+li, ul {
+    list-style: none;
+    margin: 0;
+}
+
+
+
+
+
+#constructor {
+    margin-top: 43px; 
+}
+
+
+.constructor__header {
+    text-align: center;
+align-items: center;
+    margin-top: 29px;
+}
+
+.constructor__header__a {
+    text-decoration: none;
+    color: #000;
+}
+
+.constructor__header__number {
+    display: flex;
+    justify-content: center; 
+}
+
+.constructor__header__number__logo {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #A7A7A7;
+}
+
+.constructor__header__basket {
+   display: block;
+    padding: 20px 20px; 
+}
+
+.constructor__header__basket__language {
+    display: block;
+    padding: 25px 15px; 
+}
+
+.constructor__header__basket__language a {
+    text-decoration: none;
+    color: #C1C1C1;
+}
+
+.constructor__header__basket__language a.active {
+    color: #000;
+}
+
+.constructor__header__basket__language a:hover {
+    color: #000; 
+}
+
+
+.constructor__title h2 {
+    display: flex;
+   justify-content: center;
+
+font-size: 30px;
+   margin-top: 28px;
+line-height: 35px;
+color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.constructor___stages {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 62px;
+    border-bottom: 1px solid #000;
+    
+}
+
+.constructor__stages__ul {
+  position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+.constructor___stages li a {
+display: flex;
+    justify-content: space-around;
+    text-decoration: none; 
+   color: #000;  
+     transition: all .3s ease;
+    padding-bottom: 5px;
+}
+
+.constructor___stages li a svg {
+    height: 55px;
+}
+
+.constructor___stages li a:hover {
+  
+    border-bottom: 5px solid #EA6C18;
+   
+}
+
+.stage__active {
+    border-bottom: 5px solid #EA6C18;
+}
+
+
+.constructor__stages__ul .active{
+    fill: #000;
+}
+
+
+/*constructo__sex*/
+
+div.constructor__sex div.d-flex {   
+    padding-bottom: 48px;
+    border-bottom: 1px solid #000;
+}
+
+div.constructor__sex p {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    margin-inline-start: 65px;
+    margin-top: 38px;
+}
+
+.constructor__sex__ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.constructor__sex li a {
+     display:block;
+    padding:12px 20px;
+    text-decoration: none; 
+   color: #000;    
+}
+
+div.constructor__sex li a.active, div.constructor__sex li a:hover {
+    font-weight: 700;
+         padding-bottom: 10px;
+   border-bottom: 5px solid #2F2F2F;
+}
+
+/*constructor style */
+
+
+div.constructor__style div.d-flex {
+    
+    padding-bottom: 48px;
+    border-bottom: 1px solid #000;
+
+}
+
+
+div.constructor__style p {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    margin-inline-start: 65px;
+    margin-top: 38px;
+}
+
+
+.constructor__style__ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+div.constructor__style li a {
+     display:block;
+    padding:12px 20px;
+    text-decoration: none; 
+   color: #000;    
+}
+
+div.constructor__style li a.active, div.constructor__style li a:hover {
+    font-weight: 700;
+         padding-bottom: 10px;
+   border-bottom: 5px solid #2F2F2F;
+}
+
+.constructor__next {
+    display: flex;
+        justify-content: center;
+    margin-top: 50px; 
+}
+
+
+
+
+.constructor__next__a {
+    padding: 14px 18px;
+    cursor: pointer;
+    background: #EA6C18;
+    
+}
+
+
+.constructor__next a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+       
+}
+
+.constructor__next__a:hover {
+    background: #c96a0a;
+}
+
+/*canvas*/
+
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+}
+
+.canvas__canvas {
+    display: flex;
+    justify-content: center;
+}
+
+.canvas__canvas__icons div img {
+    margin-top: 15px;
+}
+
+
+
+.canvas__canvas__icons div img:hover {
+    cursor: pointer;
+    border: 1px solid #c96a0a;
+    
+}
+    
+    
+
+.canvas__img {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.canvas__img img {
+   border: 1px solid #CFCFCF; 
+    margin-right: 5px;
+}
+
+.canvas__img img.active, .canvas__img img:hover {
+    border: 2px solid #EA6C18;
+    
+}
